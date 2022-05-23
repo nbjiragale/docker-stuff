@@ -2,6 +2,7 @@ package com.niranjan.firstapp.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,7 @@ public class EmployeeController {
 	
 	
 	//get all employees
+	
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees(){
 		return employeeRepository.findAll();
@@ -35,4 +37,6 @@ public class EmployeeController {
 	{
 		return employeeRepository.save(employee);
 	}
+	
+	
 }
